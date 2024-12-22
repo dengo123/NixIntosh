@@ -20,14 +20,14 @@
         environment.systemPackages = with pkgs; [
           neovim
           mkalias
-          micro
+	  fastfetch
         ];
 
         # Homebrew deklarative Verwaltung
         homebrew = {
           enable = true;
           brews = [ "mas" ];
-          casks = [ "wezterm" "zen-browser" "wine-stable" "zoom" ];
+          casks = [ "wezterm" "zen-browser" "wine-stable" "zoom" "tor-browser" ];
           masApps = {
             "Pages" = 409201541;
             "Numbers" = 409203825;
@@ -86,6 +86,7 @@
               "/System/Applications/Notes.app"
               "/Applications/Zen Browser.app"
               "/Applications/WezTerm.app"
+	      "/System/Applications/System Settings.app"
             ];
             show-recents = false;
           };
