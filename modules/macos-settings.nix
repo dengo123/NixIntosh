@@ -6,11 +6,11 @@
     dock = { 
       autohide = true;
       persistent-apps = [
+	"/Applications/WezTerm.app"
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/Notes.app"
         "/Applications/Zen Browser.app"
-        "/Applications/WezTerm.app"
         "/System/Applications/System Settings.app"
       ];
       show-recents = false;
