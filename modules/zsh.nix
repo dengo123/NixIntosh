@@ -12,7 +12,7 @@
       # Oh-My-Posh mit Zen-Theme initialisieren
       mkdir -p ~/.config/oh-my-posh
       if [ ! -f ~/.config/oh-my-posh/zen.toml ]; then
-        curl -o ~/.config/oh-my-posh/zen.toml https://raw.githubusercontent.com/dreamsofautonomy/zen-omp/main/zen.toml
+        curl -o ~/.config/oh-my-posh/zen.toml https://raw.githubusercontent.com/JanDeDobbeleer/dreamsofautonomy/zen-omp/blob/main/zen.toml
       fi
       eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/zen.toml)"
 
