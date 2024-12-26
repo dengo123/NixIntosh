@@ -16,6 +16,7 @@
         ./modules/homebrew.nix
         ./modules/macos-settings.nix
 	./modules/fonts.nix
+	./modules/zsh.nix
       ];
 
       # Standardkonfiguration
@@ -30,7 +31,7 @@
           neovim
           mkalias
           fastfetch
-        ];
+	];
 
         services.nix-daemon.enable = true;
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
