@@ -15,8 +15,8 @@
       extraModules = [
         ./modules/homebrew.nix
         ./modules/macos-settings.nix
-	./modules/fonts.nix
-	./modules/zsh.nix
+				./modules/fonts.nix
+				./modules/zsh.nix
       ];
 
       # Standardkonfiguration
@@ -31,13 +31,13 @@
           neovim
           mkalias
           fastfetch
-	];
+				];
 
         services.nix-daemon.enable = true;
         nix.settings.experimental-features = [ "nix-command" "flakes" ];
         nixpkgs.config.allowUnfree = true;
       
-	# Versionsnummer und State Version
+				# Versionsnummer und State Version
         system.configurationRevision = self.rev or self.dirtyRev or null;
         system.stateVersion = 5;
       };

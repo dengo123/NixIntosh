@@ -10,11 +10,11 @@
     # Benutzerdefinierte Konfiguration für die interaktive Shell
     interactiveShellInit = ''
       # Oh-My-Posh mit Zen-Theme initialisieren
-      mkdir -p ~/.config/oh-my-posh
-      if [ ! -f ~/.config/oh-my-posh/zen.toml ]; then
-        curl -o ~/.config/oh-my-posh/zen.toml https://raw.githubusercontent.com/JanDeDobbeleer/dreamsofautonomy/zen-omp/blob/main/zen.toml
+      mkdir -p ~/.config/ohmyposh
+      if [ ! -f ~/.config/ohmyposh/zen.toml ]; then
+        curl -o ~/.config/ohmyposh/zen.toml https://raw.githubusercontent.com/JanDeDobbeleer/dreamsofautonomy/zen-omp/blob/main/zen.toml
       fi
-      eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/zen.toml)"
+      eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/zen.toml)"
 
       # Syntax-Korrektur aktivieren
       setopt CORRECT
