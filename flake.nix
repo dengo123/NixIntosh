@@ -18,6 +18,7 @@
 				./modules/fonts.nix
 				./modules/zsh.nix
 				./modules/cli-tools.nix
+				./modules/dev-tools.nix
       ];
 
       # Standardkonfiguration
