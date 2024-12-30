@@ -1,12 +1,12 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, ...}: 
 
 {
   # macOS Systemeinstellungen
   system.defaults = {
-    dock = { 
+    dock = {
       autohide = true;
       persistent-apps = [
-	"/Applications/WezTerm.app"
+        "/Applications/WezTerm.app"
         "/System/Applications/Mail.app"
         "/System/Applications/Calendar.app"
         "/System/Applications/Notes.app"
@@ -26,7 +26,6 @@
       AppleShowAllFiles = true;
       NSWindowShouldDragOnGesture = true;
     };
-    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;  
+    SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
   };
 }
-

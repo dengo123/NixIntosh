@@ -7,55 +7,53 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nixpkgs, nix-darwin, ... }:
-    let
-      pkgs = import nixpkgs { system = "x86_64-darwin"; };
+  outputs = { self, nixpkgs, nix-darwin, ...}: 
+	let
+    pkgs = import nixpkgs {system = "x86_64-darwin";};
 
-      # Module manuell importieren
-      extraModules = [
-        ./modules/homebrew.nix
-        ./modules/macos-settings.nix
-				./modules/fonts.nix
-				./modules/zsh.nix
-				./modules/cli-tools.nix
-				./modules/dev-tools.nix
+    # Module manuell importieren
+    extraModules = [
+      ./modules/homebrew.nix
+      ./modules/macos-settings.nix
+      ./modules/fonts.nix
+      ./modules/zsh.nix
+      ./modules/cli-tools.nix
+      ./modules/dev-tools.nix
+    ];
+
+    # Standardkonfiguration
+    configuration = {
+      config,
+      pkgs,
+      ...
+    }: {
+      networking = {
+        computerName = "MacBook von Deniz";
+        hostName = "NixIntosh";
+      };
+
+      # Systemweite Pakete
+      environment.systemPackages = with pkgs; [
+        mkalias
+        fastfetch
       ];
 
-      # Standardkonfiguration
-      configuration = { config, pkgs, ... }: {
-        networking = {
-          computerName = "MacBook von Deniz";
-          hostName = "NixIntosh";
-        };
+      services.nix-daemon.enable = true;
+      nix.settings.experimental-features = ["nix-command" "flakes"];
+      nixpkgs.config.allowUnfree = true;
 
-        # Systemweite Pakete
-        environment.systemPackages = with pkgs; [
-					jq    
-          mkalias
-          fastfetch
-					nodejs
-					cargo
-					python3Packages.flake8   # Flake8 für Python
-					nodePackages.jsonlint    # JSON-Linter
-					taplo                   # TOML-Formatter
-					nodePackages.eslint_d    # Eslint Daemon
-				];
-
-        services.nix-daemon.enable = true;
-        nix.settings.experimental-features = [ "nix-command" "flakes" ];
-        nixpkgs.config.allowUnfree = true;
-      
-				# Versionsnummer und State Version
-        system.configurationRevision = self.rev or self.dirtyRev or null;
-        system.stateVersion = 5;
-      };
-    in {
-      darwinConfigurations.NixIntosh = nix-darwin.lib.darwinSystem {
-        system = "x86_64-darwin";
-        modules = [
-          configuration
-        ] ++ extraModules;
-      };
+      # Versionsnummer und State Version
+      system.configurationRevision = self.rev or self.dirtyRev or null;
+      system.stateVersion = 5;
     };
+  in {
+    darwinConfigurations.NixIntosh = nix-darwin.lib.darwinSystem {
+      system = "x86_64-darwin";
+      modules =
+        [
+          configuration
+        ]
+        ++ extraModules;
+    };
+  };
 }
-
