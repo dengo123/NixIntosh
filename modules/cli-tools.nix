@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    ranger
     ripgrep         # Schnelle Textsuche
     fd              # Einfacher, schneller Ersatz für 'find'
     fzf             # Fuzzy Finder für interaktive Suchen
