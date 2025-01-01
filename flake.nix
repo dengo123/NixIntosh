@@ -15,7 +15,7 @@
     extraModules = [
       ./modules/homebrew.nix
       ./modules/macos-settings.nix
-      ./modules/macos-rice.nix
+      ./modules/rice.nix
       ./modules/zsh.nix
       ./modules/cli.nix
       ./modules/gui.nix

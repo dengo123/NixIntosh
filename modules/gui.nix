@@ -3,6 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     mkalias
+    aerospace
+    sketchybar
   ];
 
   system.activationScripts.applications.text = let

@@ -12,10 +12,6 @@
   };
   # Ricing Pakete
   environment.systemPackages = with pkgs; [
-    # Window Manager und Statusbar
-    aerospace
-    sketchybar
-
     #Fancies
     fastfetch
     pipes
@@ -25,7 +21,6 @@
     asciiquarium-transparent
     nyancat
     cmatrix
-    neo
     cowsay
     fortune
     sl
