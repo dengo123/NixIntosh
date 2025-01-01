@@ -19,6 +19,7 @@
       ./modules/zsh.nix
       ./modules/cli-tools.nix
       ./modules/dev-tools.nix
+      ./modules/tor.nix
     ];
 
     # Standardkonfiguration
