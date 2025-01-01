@@ -10,5 +10,9 @@
       nerd-fonts.symbols-only
     ];
   };
+  # Ricing Pakete
+  environment.systemPackages = with pkgs; [
+    neofetch
+  ];
 }
 

@@ -15,29 +15,20 @@
     extraModules = [
       ./modules/homebrew.nix
       ./modules/macos-settings.nix
-      ./modules/fonts.nix
+      ./modules/rice.nix
       ./modules/zsh.nix
-      ./modules/cli-tools.nix
+      ./modules/cli.nix
+      ./modules/gui.nix
       ./modules/dev-tools.nix
-      ./modules/tor.nix
     ];
 
     # Standardkonfiguration
-    configuration = {
-      config,
-      pkgs,
-      ...
-    }: {
+    configuration = { config, pkgs, ...}: 
+    {
       networking = {
         computerName = "MacBook von Deniz";
         hostName = "NixIntosh";
       };
-
-      # Systemweite Pakete
-      environment.systemPackages = with pkgs; [
-        mkalias
-        fastfetch
-      ];
 
       services.nix-daemon.enable = true;
       nix.settings.experimental-features = ["nix-command" "flakes"];

@@ -12,7 +12,7 @@
       "zen-browser" 
       "wine-stable" 
       "zoom" 
-      "tor-browser"
+      "opencore-patcher"
     ];
 
     # Mac App Store Apps
