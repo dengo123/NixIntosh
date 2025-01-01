@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     mkalias
-    tor-browser
   ];
 
   system.activationScripts.applications.text = let

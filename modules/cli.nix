@@ -18,7 +18,6 @@
     ffmpeg          # Video Thumbnails für yazi
     zoxide          # Vergangene Pfad Navigierung
     xclip           # system clipboard support
-    tor             # Tor Service
   ];
 }
 

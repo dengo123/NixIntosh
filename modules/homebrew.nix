@@ -13,6 +13,7 @@
       "wine-stable" 
       "zoom" 
       "opencore-patcher"
+      "tor-browser"
     ];
 
     # Mac App Store Apps
