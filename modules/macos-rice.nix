@@ -23,7 +23,6 @@
     peaclock
     cbonsai
     asciiquarium-transparent
-    ascii-rain
     nyancat
     cmatrix
     neo
