@@ -9,5 +9,6 @@
 		cargo
     pipx
 		jq
+    lua5_4
 	];
 }

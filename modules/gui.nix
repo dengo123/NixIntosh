@@ -6,6 +6,10 @@
     aerospace
     sketchybar
   ];
+  
+  services.sketchybar = {
+    enable = false;
+  };
 
   system.activationScripts.applications.text = let
   env = pkgs.buildEnv {

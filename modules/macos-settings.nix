@@ -19,12 +19,19 @@
       FXPreferredViewStyle = "clmv";
       _FXShowPosixPathInTitle = true;
       AppleShowAllFiles = true;
+      FXRemoveOldTrashItems = true;
+      ShowExternalHardDrivesOnDesktop = false;
     };
     loginwindow.GuestEnabled = false;
     NSGlobalDomain = {
+      _HIHideMenuBar = true;
       AppleInterfaceStyle = "Dark";
       AppleShowAllFiles = true;
       NSWindowShouldDragOnGesture = true;
+      "com.apple.keyboard.fnState" = true;
+    };
+    WindowManager = {
+      EnableStandardClickToShowDesktop = true;
     };
     SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
   };
