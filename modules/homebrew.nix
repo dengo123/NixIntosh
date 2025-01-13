@@ -13,7 +13,9 @@
       "wine-stable" 
       "zoom" 
       "opencore-patcher"
+      "loop"
       "tor-browser"
+      "ghostty"
     ];
 
     # Mac App Store Apps

@@ -3,8 +3,8 @@
 {
   environment.systemPackages = with pkgs; [
     mkalias
-    aerospace
     sketchybar
+    aerospace
   ];
   
   services.sketchybar = {
